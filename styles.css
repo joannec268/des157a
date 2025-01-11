@@ -1,0 +1,79 @@
+/*************** reset setting ***************/
+h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block; 
+    max-width: 100%; 
+    height: auto;
+}
+
+/*************** layout ***************/
+.layout {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.fans-container {
+    display: flex;
+    gap: 50px;
+}
+
+
+/*************** fan flip animation ***************/
+.fan {
+    perspective: 1000px;
+}
+
+.redfan {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+}
+
+.front {
+    background-image: url(images/red-fan.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(0deg);
+}
+
+
+.back {
+    background-image: url(images/red-fan.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.fan:hover .redfan {
+    transform: rotateY(180deg);
+}
+
+/*************** header ***************/
+h1 {
+    font-family: "Caveat Brush", serif;
+}
+
+.rotate {
+    display: block;
+}
+
+/*************** navigation ***************/
+ul {
+    list-style-type: none;
+}
