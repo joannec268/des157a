@@ -1,4 +1,6 @@
 /*************** reset setting ***************/
+
+
 h1, h2, h3, p, ul, ol {
     margin: 0;
     padding: 0;
@@ -10,70 +12,313 @@ img {
     height: auto;
 }
 
-/*************** layout ***************/
-.layout {
-    display: flex;
-    flex-direction: row-reverse;
+ul {
+    list-style-type: none;
 }
 
-.fans-container {
+
+/*************** layout ***************/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    min-width: 800px;
+    width: 100%;
+    max-height: 750px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.layout { 
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 100px;
+}
+
+main {
     display: flex;
     gap: 50px;
 }
 
+.fans-container-left {
+    margin-top: 20px;
+}
 
-/*************** fan flip animation ***************/
+.fans-container-right {
+    margin-top: 100px;
+}
+
+
+/*************** fans ***************/
+.front h2 {
+    font-family: "Caveat Brush", serif;
+    font-size: 1.8em;
+    color: #3D3836;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.fan ul {
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+ul li a {
+    font-family: 'Rasa', Arial;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    color: rgba(61,56,54);
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.fans-container-left, .fans-container-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .fan {
     perspective: 1000px;
 }
 
-.redfan {
+.redfan, .greenfan {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width:330px;
+    height: 281px;
     transform-style: preserve-3d;
     transition: transform 1s;
 }
 
 .front, .back {
     position: absolute;
-    width: 100%;
-    height: 100%;
     backface-visibility: hidden;
-
+    width: 330px;
+    height: 281px;
 }
 
 .front {
-    background-image: url(images/red-fan.png);
+    background-image: url(images/red-fan-front.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding-top: 55px;
     transform: rotateY(0deg);
+}
+
+.greenfan .front {
+    background-image: url(images/green-fan-front.png);
 }
 
 
 .back {
-    background-image: url(images/red-fan.png);
+    background-image: url(images/red-fan-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    padding-top: 35px;
     transform: rotateY(180deg);
 }
 
-.fan:hover .redfan {
+.back.research {
+    padding-top: 45px;
+}
+
+.greenfan .back {
+    background-image: url(images/green-fan-back.png);
+}
+
+.fan:hover .redfan, .fan:hover .greenfan {
+    cursor: pointer;
     transform: rotateY(180deg);
+}
+
+ul {
+    text-align: center;
 }
 
 /*************** header ***************/
+.scroll-container {
+    position: relative;
+    width: 282px;
+    overflow: hidden;
+    animation: scrollDown 1s ease forwards;
+}
+
+
+.scroll {
+    background-image: url(images/scroll.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 282px;
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
 h1 {
     font-family: "Caveat Brush", serif;
+    font-size: 3em;
+    color: #3D3836;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    padding: 50px 120px 150px 120px;
+    text-align: center;
+    
+}
+
+.h1a {
+    margin-top: 10px;
+}
+
+.h1b {
+    margin-top: 90px;
 }
 
 .rotate {
     display: block;
 }
 
-/*************** navigation ***************/
-ul {
-    list-style-type: none;
+/*************** footer ***************/
+footer {
+    font-family: 'Rasa', serif;
+    color: #3D3836;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    margin: auto auto 10px auto;
+}
+
+footer a {
+    color: #3D3836;
+}
+
+
+/*************** background ***************/
+body {
+    background: linear-gradient(300deg,#ffdb7d,#ffd0d6,#afe3ff);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.bg-lights ul li {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    background: radial-gradient(rgb(255, 255, 255), transparent, transparent);
+    bottom: 0; 
+    left: 10vw;
+    animation: bg-animation 15s linear infinite;
+    z-index: 1;
+}
+
+.bg-lights ul li:nth-child(2){
+    left: 5vw;
+    animation-delay: 2s;
+    background: radial-gradient(rgb(255, 154, 54), transparent, transparent);
+}
+
+.bg-lights ul li:nth-child(3){
+    left: 40vw;
+    animation-delay: 4s;
+    background: radial-gradient(rgb(255, 154, 54), transparent, transparent);
+}
+
+.bg-lights ul li:nth-child(4){
+    left: 55vw;
+    animation-delay: 6s;
+}
+
+.bg-lights ul li:nth-child(5){
+    left: 65vw;
+    animation-delay: 4s;
+}
+
+.bg-lights ul li:nth-child(6){
+    left: 76vw;
+    animation-delay: 3s;
+    background: radial-gradient(rgb(255, 154, 54), transparent, transparent);
+}
+
+.bg-lights ul li:nth-child(7){
+    left: 85vw;
+    animation-delay: 5s;
+}
+
+.bg-lights ul li:nth-child(8){
+    left: 95vw;
+    animation-delay: 2s;
+}
+
+.bg-lights ul li:nth-child(9){
+    left: 32vw;
+    animation-delay: 2s;
+}
+
+.bg-lights ul li:nth-child(10){
+    left: 22vw;
+    animation-delay: 4s;
+}
+
+.bg-lights ul li:nth-child(11){
+    left: 42vw;
+    animation-delay: 9s;
+}
+
+.bg-lights ul li:nth-child(12){
+    left: 12vw;
+    animation-delay: 8s;
+}
+
+.bg-lights ul li:nth-child(13){
+    left: 95vw;
+    animation-delay: 8s;
+}
+
+@keyframes bg-animation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+        bottom: 0;
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+        bottom: 100vh;
+    }
 }
