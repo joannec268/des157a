@@ -38,12 +38,12 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    gap: 100px;
+    gap: 130px;
 }
 
 main {
     display: flex;
-    gap: 50px;
+    gap: 70px;
 }
 
 .fans-container-left {
@@ -107,7 +107,7 @@ ul li a:hover {
 }
 
 .front {
-    background-image: url(images/red-fan-front.png);
+    background-image: url(images/red-front.png);
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
@@ -118,12 +118,12 @@ ul li a:hover {
 }
 
 .greenfan .front {
-    background-image: url(images/green-fan-front.png);
+    background-image: url(images/blue-front.png);
 }
 
 
 .back {
-    background-image: url(images/red-fan-back.png);
+    background-image: url(images/red-back.png);
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
@@ -138,7 +138,7 @@ ul li a:hover {
 }
 
 .greenfan .back {
-    background-image: url(images/green-fan-back.png);
+    background-image: url(images/blue-back.png);
 }
 
 .fan:hover .redfan, .fan:hover .greenfan {
@@ -218,9 +218,9 @@ footer a {
 
 /*************** background ***************/
 body {
-    background: linear-gradient(300deg,#ffdb7d,#ffd0d6,#afe3ff);
+    background: linear-gradient(288deg, rgba(101, 113, 102, 0.93) -13%, rgba(207, 214, 196, 0.93) 9.31%, rgba(243, 195, 178, 0.93) 31.63%, rgba(253, 232, 211, 0.93) 52.54%, rgba(218, 235, 227, 0.93) 77.4%, rgba(153, 205, 216, 0.93) 100%);
     background-size: 180% 180%;
-    animation: gradient-animation 18s ease infinite;
+    animation: gradient-animation 10s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -266,12 +266,12 @@ body {
 
 .bg-lights ul li:nth-child(5){
     left: 65vw;
-    animation-delay: 4s;
+    animation-delay: 5s;
 }
 
 .bg-lights ul li:nth-child(6){
     left: 76vw;
-    animation-delay: 3s;
+    animation-delay: 2s;
     background: radial-gradient(rgb(255, 154, 54), transparent, transparent);
 }
 
@@ -287,12 +287,12 @@ body {
 
 .bg-lights ul li:nth-child(9){
     left: 32vw;
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 
 .bg-lights ul li:nth-child(10){
     left: 22vw;
-    animation-delay: 4s;
+    animation-delay: 5s;
 }
 
 .bg-lights ul li:nth-child(11){
