@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Right click on the screen and click "Inspect", then click "Console".</h2>
+
+    <script>
+    // a program that takes a lowercase string and capitalizes the first letter of each word in the string
+        var input = prompt("Please enter a string", "")
+
+        // selection
+        if (input!=="") {
+            // sequence
+            var words = input.split(' '); // note: ' ' separates words on spaces, creates an array
+            // loop
+            for (var i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+            }
+            console.log(words.join(" "));      
+        } 
+        else {
+            console.log("ERROR: You didn't enter a string")
+        }
+ 
+    </script>
+    
+</body>
+</html>
