@@ -38,12 +38,12 @@ body {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    gap: 130px;
+    gap: 140px;
 }
 
 main {
     display: flex;
-    gap: 70px;
+    gap: 50px;
 }
 
 .fans-container-left {
@@ -57,7 +57,7 @@ main {
 
 /*************** fans ***************/
 .front h2 {
-    font-family: "Caveat Brush", serif;
+    font-family: "Protest Revolution", serif;
     font-size: 1.8em;
     color: #3D3836;
     padding: 5px 20px;
@@ -129,12 +129,8 @@ ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: start;
-    padding-top: 35px;
+    padding-top: 25px;
     transform: rotateY(180deg);
-}
-
-.back.research {
-    padding-top: 45px;
 }
 
 .greenfan .back {
@@ -153,9 +149,10 @@ ul {
 /*************** header ***************/
 .scroll-container {
     position: relative;
-    width: 282px;
+    /* width: 282px; */
     overflow: hidden;
     animation: scrollDown 1s ease forwards;
+    width: 100%;
 }
 
 
@@ -163,7 +160,7 @@ ul {
     background-image: url(images/scroll.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 282px;
+    width: 100%;
 }
 
 @keyframes scrollDown {
@@ -177,13 +174,13 @@ ul {
 
 
 h1 {
-    font-family: "Caveat Brush", serif;
-    font-size: 3em;
+    font-family: "Protest Revolution", serif;
+    font-size: 3.2em;
     color: #3D3836;
     display: flex;
     flex-direction: row-reverse;
-    gap: 20px;
-    padding: 50px 120px 150px 120px;
+    gap: 30px;
+    padding: 50px 100px 120px 85px;
     text-align: center;
     
 }
@@ -314,11 +311,117 @@ body {
     0% {
         transform: scale(0);
         opacity: 1;
-        bottom: 0;
+        top: 0;
     }
     100% {
         transform: scale(5);
         opacity: 0;
-        bottom: 100vh;
+        top: 100%;
+    }
+}
+
+
+/* petals */
+body {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.falling-petals {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.falling-petals div {
+    position: absolute;
+    display: block;
+    opacity: 0;
+}
+
+.falling-petals div:nth-child(1) {
+    left: 3%;
+    animation: petals 8s linear infinite;
+}
+
+.falling-petals div:nth-child(2) {
+    left: 10%;
+    animation: petals 10s linear infinite;
+    animation-delay: 3s;
+}
+
+.falling-petals div:nth-child(3) {
+    left: 20%;
+    animation: petals 13s linear infinite;
+}
+
+.falling-petals div:nth-child(4) {
+    left: 30%;
+    animation: petals 15s linear infinite;
+    animation-delay: 2s;
+    z-index: 1;
+}
+
+.falling-petals div:nth-child(5) {
+    left: 45%;
+    animation: petals 12s linear infinite;
+    animation-delay: 1s;
+    z-index: 1;
+}
+
+.falling-petals div:nth-child(6) {
+    left: 65%;
+    animation: petals 15s linear infinite;
+    animation-delay: 3s;
+}
+
+.falling-petals div:nth-child(7) {
+    left: 80%;
+    animation: petals 12s linear infinite;
+    animation-delay: 1s;
+    z-index: 1
+}
+
+.falling-petals div:nth-child(8) {
+    left: 90%;
+    animation: petals 15s linear infinite;
+    animation-delay: 2s;
+}
+
+.falling-petals div:nth-child(9) {
+    left: 97%;
+    animation: petals 10s linear infinite;
+}
+
+@keyframes petals {
+    0% {
+        opacity: 0;
+        top: 0%;
+        transform: translateX(20px) rotate(0deg);
+    } 
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(-20px) rotate(60deg);
+    }
+    40% {
+        transform: translateX(-20px) rotate(0deg);
+    }
+    60% {
+        transform: translateX(20px) rotate(50deg);
+    }
+    80% {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    100% {
+        top: 110%;
+        transform: translateX(20px) rotate(0deg);
     }
 }
