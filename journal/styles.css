@@ -209,3 +209,16 @@ footer {
     text-align: center;
     padding: 30px;
 }
+
+/*************** sketch ***************/
+.sketch {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.sketch img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 30px;
+}
