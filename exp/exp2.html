@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experiment 2</title>
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <div id="output">
+        <p>Your Number(s):</p>
+    </div>
+    <script>
+        // this program asks the user to enter a positive number and then generates the number of random numbers they want to generate
+        var quantity = Number(prompt("How many random numbers would you like to generate from 0-100?",""));
+        
+
+        function randomInt() {
+            return Math.floor(Math.random() * 101);
+        }
+
+        if (isNaN(quantity) || quantity <= 0 ) {
+            alert("ERROR: Please enter a positive integer.")
+        }
+        else {
+            const output = document.querySelector('#output');
+            var numList = [];
+
+            for (var i = 0; i < quantity; i++) {
+                var num = randomInt();
+                numList.push(num);
+
+                output.innerHTML += `<p>${num}</p>`;
+            }
+        }
+        
+
+    </script>
+    
+</body>
+</html>
