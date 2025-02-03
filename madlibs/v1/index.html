@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar New Year Madlibs</title>
+
+     <!-- normalize -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+     <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Protest+Revolution&display=swap" rel="stylesheet">
+
+     <!-- css -->
+     <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="lanterns">
+            <img class="tall-lantern" src="images/tall-lantern.png" alt="image of lantern" width="100" height="311">
+            <img class="round-lantern" src="images/round-lantern.png" alt="image of lantern" width="115" height="255">
+        </div>
+        <h1>Lunar New Year Madlibs</h1>
+        <div class="lanterns">
+            <img class="tall-lantern" src="images/tall-lantern.png" alt="image of lantern" width="100" height="311">
+            <img class="round-lantern" src="images/round-lantern.png" alt="image of lantern" width="115" height="255">
+        </div>
+    </header>
+
+
+    <form class="homepage">
+        <img class="big-envelope" src="images/big-envelope.png" alt="drawing of a big red envelope" width="420" height="525">
+        <div class="page1">
+            <div class="formSection">
+                <div class="type">
+                    <label>Provide a Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="type">
+                    <label for="dogcat">Dog or Cat?</label>
+                    <select id="dogcat" required>
+                        <option value="">---</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                    </select>
+                </div>
+                <div class="type">
+                    <label for="pronoun">Select a Pronoun</label>
+                    <select id="pronoun" required>
+                        <option value="">---</option>
+                        <option value="his">His</option>
+                        <option value="his">Her</option>
+                        <option value="his">Its</option>
+                        <option value="his">Their</option>
+                    </select>
+                </div>
+            </div>
+            <div class="nextBtn">
+                <button id="next">Next</button>
+            </div>
+        </div>
+        <div class="page2">
+            <div class="formSection">
+                <div class="type"><label>Provide a Kinship Term</label><input type="text" required></div>
+                <div class="type"><label>Enter a Number</label><input type="text" required></div>
+                <div class="type"><label>Enter a Store Name</label><input type="text" required></div>
+                <div class="type"><label>Enter a Plural Noun</label><input type="text" required></div>
+            </div>
+            <div class="buttons space-between">
+                <button id="back">Back</button>
+                <input id="submitBtn" type="submit">
+            </div>
+            
+        </div>
+    </form>
+
+    <div class="subpages">
+        <div class="stars">
+            <img class="starA" src="images/spark.png" alt="drawing of a star" width="45" height="81">
+            <img class="starB" src="images/small-spark.png" alt="drawing of a star" width="27" height="48">
+            <img class="starC" src="images/small-spark.png" alt="drawing of a star" width="27" height="48">
+            <img class="starD" src="images/spark.png" alt="drawing of a star" width="45" height="81">
+            <img class="starE" src="images/small-spark.png" alt="drawing of a star" width="27" height="48">
+            <img class="starF" src="images/small-spark.png" alt="drawing of a star" width="27" height="48">
+        </div>
+
+        <div class="story">
+            <div class="text">
+                <p>In Lunar New Year, [name] the [dog/cat] received red envelopes from [pronoun] [kinship name]. [name] opened the New Year red envelope and got $[amount]! [pronoun] went to [store name] and purchased [noun plural].</p>
+            </div>
+
+            <div class="buttons">
+                <button id="regenerate">Regenerate</button>
+            </div>
+        </div>
+
+        <div class="small-envelopes">
+            <img class="envelope1" src="images/envelope.png" alt="drawing of a red envelope" width="115" height="166">
+            <img class="envelope2" src="images/envelope.png" alt="drawing of a red envelope" width="115" height="166">
+        </div>
+
+        <img class="big-envelope" src="images/big-envelope.png" alt="drawing of a big red envelope" width="420" height="525">
+
+        <div class="dogpage">
+            <img class="dog-img" src="images/dog.png" alt="drawing of a red envelope" width="250" height="270">
+        </div>
+
+        <div class="catpage">
+            <img class="cat-img" src="images/cat.png" alt="drawing of a red envelope"  width="250" height="255">
+        </div>
+    </div>
+    
+    
+</body>
+</html>
