@@ -33,14 +33,14 @@
         </div>
     </header>
 
-
-    <form class="homepage">
-        <img class="big-envelope" src="images/big-envelope.png" alt="drawing of a big red envelope" width="420" height="525">
-        <div class="page1">
+    <img class="big-envelope" src="images/big-envelope.png" alt="drawing of a big red envelope" width="420" height="525">
+    <section id="page1" class="showing">
+        <form>
             <div class="formSection">
                 <div class="type">
-                    <label>Provide a Name</label>
-                    <input type="text">
+                    <label for="name">Provide a Name</label>
+                    <input type="text" id="name">
+                    <div class="error" id="name_error"></div>
                 </div>
                 <div class="type">
                     <label for="dogcat">Dog or Cat?</label>
@@ -49,6 +49,7 @@
                         <option value="dog">Dog</option>
                         <option value="cat">Cat</option>
                     </select>
+                    <div class="error" id="dogcat_error"></div>
                 </div>
                 <div class="type">
                     <label for="pronoun">Select a Pronoun</label>
@@ -59,28 +60,48 @@
                         <option value="his">Its</option>
                         <option value="his">Their</option>
                     </select>
+                    <div class="error" id="pronoun_error"></div>
                 </div>
             </div>
             <div class="nextBtn">
                 <button id="next">Next</button>
             </div>
-        </div>
-        <div class="page2">
+        </form>
+    </section>
+
+    <section id="page2" class="hidden">
+        <form>
             <div class="formSection">
-                <div class="type"><label>Provide a Kinship Term</label><input type="text"></div>
-                <div class="type"><label>Enter a Number</label><input type="text"></div>
-                <div class="type"><label>Enter a Store Name</label><input type="text"></div>
-                <div class="type"><label>Enter a Plural Noun</label><input type="text"></div>
+                <div class="type">
+                    <label for="kinship">Provide a Kinship Term</label>
+                    <input type="text" id="kinship">
+                    <div class="error" id="kinship_error"></div>
+                </div>
+                <div class="type">
+                    <label for="number">Enter a Number</label>
+                    <input type="text" id="number">
+                    <div class="error" id="number_error"></div>
+                </div>
+                <div class="type">
+                    <label for="store">Enter a Store Name</label>
+                    <input type="text" id="store">
+                    <div class="error" id="store_error"></div>
+                </div>
+                <div class="type">
+                    <label for="noun">Enter a Plural Noun</label>
+                    <input type="text" id="noun">
+                    <div class="error" id="noun_error"></div>
+                </div>
             </div>
             <div class="buttons space-between">
                 <button id="back">Back</button>
                 <input id="submitBtn" type="submit">
             </div>
-            
-        </div>
-    </form>
+        </form>
+    </section>
 
-    <div class="subpages">
+
+    <section id="madlib" class="hidden">
         <div class="stars">
             <img class="starA" src="images/spark.png" alt="drawing of a star" width="45" height="81">
             <img class="starB" src="images/small-spark.png" alt="drawing of a star" width="27" height="48">
@@ -91,9 +112,9 @@
         </div>
 
         <div class="story">
-            <div class="text">
-                <p>In Lunar New Year, [name] the [dog/cat] received red envelopes from [pronoun] [kinship name]. [name] opened the New Year red envelope and got $[amount]! [pronoun] went to [store name] and purchased [noun plural].</p>
-            </div>
+            <article id="madlibStory">
+                <!-- <p>In Lunar New Year, [name] the [dog/cat] received red envelopes from [pronoun] [kinship name]. [name] opened the New Year red envelope and got $[amount]! [pronoun] went to [store name] and purchased [noun plural].</p> -->
+            </article>
 
             <div class="buttons">
                 <button id="regenerate">Regenerate</button>
@@ -105,16 +126,16 @@
             <img class="envelope2" src="images/envelope.png" alt="drawing of a red envelope" width="115" height="166">
         </div>
 
-        <img class="big-envelope" src="images/big-envelope.png" alt="drawing of a big red envelope" width="420" height="525">
-
-        <div class="dogpage">
+        <div id="dogpage" class="showing">
             <img class="dog-img" src="images/dog.png" alt="drawing of a red envelope" width="250" height="270">
+            <div class="dogMoney"></div>
         </div>
 
-        <div class="catpage">
+        <div id="catpage" class="showing">
             <img class="cat-img" src="images/cat.png" alt="drawing of a red envelope"  width="250" height="255">
+            <div class="catMoney"></div>
         </div>
-    </div>
+    </section>
     
     
 </body>
