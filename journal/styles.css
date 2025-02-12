@@ -50,56 +50,59 @@ body {
 
 .falling-petals div:nth-child(1) {
     left: 3%;
-    animation: petals 8s linear infinite;
+    animation: petals 23s linear infinite;
+    animation-delay: 1s;
 }
 
 .falling-petals div:nth-child(2) {
     left: 10%;
-    animation: petals 10s linear infinite;
-    animation-delay: 3s;
+    animation: petals 21s linear infinite;
+    animation-delay: 5s;
 }
 
 .falling-petals div:nth-child(3) {
     left: 20%;
-    animation: petals 13s linear infinite;
+    animation: petals 24s linear infinite;
+    animation-delay: 3s;
 }
 
 .falling-petals div:nth-child(4) {
     left: 30%;
-    animation: petals 15s linear infinite;
-    animation-delay: 2s;
+    animation: petals 29s linear infinite;
+    animation-delay: 6s;
     z-index: 1;
 }
 
 .falling-petals div:nth-child(5) {
     left: 45%;
-    animation: petals 12s linear infinite;
-    animation-delay: 1s;
+    animation: petals 27s linear infinite;
+    animation-delay: 3s;
     z-index: 1;
 }
 
 .falling-petals div:nth-child(6) {
     left: 65%;
-    animation: petals 15s linear infinite;
-    animation-delay: 3s;
+    animation: petals 31s linear infinite;
+    animation-delay: 7s;
 }
 
 .falling-petals div:nth-child(7) {
     left: 80%;
-    animation: petals 12s linear infinite;
-    animation-delay: 1s;
+    animation: petals 30s linear infinite;
+    animation-delay: 4s;
     z-index: 1
 }
 
 .falling-petals div:nth-child(8) {
     left: 90%;
-    animation: petals 15s linear infinite;
-    animation-delay: 2s;
+    animation: petals 27s linear infinite;
+    animation-delay: 8s;
 }
 
 .falling-petals div:nth-child(9) {
     left: 97%;
-    animation: petals 10s linear infinite;
+    animation: petals 25s linear infinite;
+    animation-delay: 2s;
 }
 
 @keyframes petals {
@@ -112,8 +115,12 @@ body {
         opacity: 1;
     }
 
-    20% {
+    10% {
         transform: translateX(-20px) rotate(60deg);
+    }
+
+    20% {
+        transform: translateX(20px) rotate(60deg);
     }
     40% {
         transform: translateX(-20px) rotate(0deg);
