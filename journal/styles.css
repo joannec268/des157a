@@ -14,6 +14,14 @@ h1, h2, p, article a {
     color: #121212;
 }
 
+figcaption {
+    font-family: "Rasa", serif;
+    font-size: 1.1em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
 /*************** background ***************/
 body {
     background: linear-gradient(180deg, #81A389 0%, #CFD6C4 34.01%, #FDE8D3 66.08%, #F3C3B2 100%);
