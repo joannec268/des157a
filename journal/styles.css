@@ -50,58 +50,58 @@ body {
 
 .falling-petals div:nth-child(1) {
     left: 3%;
-    animation: petals 23s linear infinite;
+    animation: petals 32s linear infinite;
     animation-delay: 1s;
 }
 
 .falling-petals div:nth-child(2) {
     left: 10%;
-    animation: petals 21s linear infinite;
+    animation: petals 36s linear infinite;
     animation-delay: 5s;
 }
 
 .falling-petals div:nth-child(3) {
     left: 20%;
-    animation: petals 24s linear infinite;
+    animation: petals 34s linear infinite;
     animation-delay: 3s;
 }
 
 .falling-petals div:nth-child(4) {
     left: 30%;
-    animation: petals 29s linear infinite;
+    animation: petals 39s linear infinite;
     animation-delay: 6s;
     z-index: 1;
 }
 
 .falling-petals div:nth-child(5) {
     left: 45%;
-    animation: petals 27s linear infinite;
+    animation: petals 37s linear infinite;
     animation-delay: 3s;
     z-index: 1;
 }
 
 .falling-petals div:nth-child(6) {
     left: 65%;
-    animation: petals 31s linear infinite;
+    animation: petals 41s linear infinite;
     animation-delay: 7s;
 }
 
 .falling-petals div:nth-child(7) {
     left: 80%;
-    animation: petals 30s linear infinite;
+    animation: petals 40s linear infinite;
     animation-delay: 4s;
     z-index: 1
 }
 
 .falling-petals div:nth-child(8) {
     left: 90%;
-    animation: petals 27s linear infinite;
+    animation: petals 37s linear infinite;
     animation-delay: 8s;
 }
 
 .falling-petals div:nth-child(9) {
     left: 97%;
-    animation: petals 25s linear infinite;
+    animation: petals 35s linear infinite;
     animation-delay: 2s;
 }
 
@@ -111,16 +111,22 @@ body {
         top: 0%;
         transform: translateX(20px) rotate(0deg);
     } 
-    5% {
+    1% {
         opacity: 1;
     }
 
-    10% {
+    7% {
         transform: translateX(-20px) rotate(60deg);
     }
 
-    20% {
+    10% {
         transform: translateX(20px) rotate(60deg);
+    }
+    20% {
+        transform: translateX(-20px) rotate(0deg);
+    }
+    30% {
+        transform: translateX(20px) rotate(0deg);
     }
     40% {
         transform: translateX(-20px) rotate(0deg);
