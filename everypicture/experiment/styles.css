@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Caveat Brush', Arial;
+    font-size: 3em;
+}
+
+p {
+    font-family: 'Inika', Serif;
+    font-size: 1.1em;
+    line-height: 30px;;
+}
+
+main {
+	width: 30vw;
+	padding: 30px;
+}
+
+section {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    height: 100vh;
+}
+
+figure {
+    display: block;
+    position: fixed;
+    width: 70vw;
+    height: 100vh;
+	top:0;
+	right:0;
+	overflow: hidden;
+    margin: 0;
+}
+
+figure img {
+	position: absolute;
+	transition: all 2s ease;
+}
+
+.sect1 {
+	width: 115vh;
+	top:0;
+	left: 50%;
+	transform:translateX(-50%);
+}
+
+.sect2, .sect3, .sect4, .sect5 {
+    width: 2100px;
+}
+
+.sect2 {
+	top: calc(-2984px + 370vh);
+	left: calc(-3377px + 200vw);
+}
+
+.sect3 {
+    top: calc(-2984px + 310vh);
+	left: calc(-3377px + 230vw);
+}
+
+.sect4 {
+	top: calc(-2984px + 265vh);
+	left: calc(-3377px + 200vw);
+}
+
+.sect5 {
+    top: calc(-2984px + 310vh);
+	left: calc(-3377px + 160vw);
+}
+
+.sect6 {
+    width: 115vh;
+	top:0;
+	left: 50%;
+	transform:translateX(-50%);
+}
+
+.color1 { 
+    background-color: #f7f7f5; 
+    transition: all 1s;
+}
+.color2 { 
+    background-color: #ebc8c1; 
+    transition: all 1s;
+}
+.color3 { 
+    background-color: #d2dded; 
+    transition: all 1s;
+}
+.color4 { 
+    background-color: #FDF3DA; 
+    transition: all 1s;
+}
+.color5 { 
+    background-color: #d7c9a3; 
+    transition: all 1s;
+}
+.color6 { 
+    background-color: #f7f7f5; 
+    transition: all 1s;
+}
