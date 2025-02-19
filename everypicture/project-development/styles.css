@@ -1,0 +1,84 @@
+/*************** reset setting ***************/
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/*************** layout ***************/
+
+body {
+    background-color: #e1e7f4;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}   
+
+.container {
+    background-color: white;
+    padding: 0 50px;
+}
+
+header {
+    margin: 50px;
+    padding-top: 20px;
+}
+
+figure {
+    display: block; 
+    margin: auto;
+    max-width: 100%; 
+    width: 700px;
+    height: auto;
+}
+
+img {
+    border: 1px solid black;
+    margin: 20px 0 10px 0;
+}
+
+article p {
+   width: 700px;
+   margin: auto;
+}
+
+
+/*************** typography ***************/
+h1, p {
+    color: #121212;
+}
+
+h1 {
+    font-family: "Caveat Brush", serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+article p {
+    font-family: "Inika", serif;
+    text-indent: 2em;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    margin: 20px 0;
+}
+
+figcaption {
+    font-family: "Inika", serif;
+    font-size: 1em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+/*************** footer ***************/
+footer {
+    padding: 30px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1em;
+}
