@@ -1,6 +1,5 @@
 window.addEventListener('load', function () {
 
-	//define variables needed
 	const sections = document.querySelectorAll('section');
 	let sectionTops = [];
 	let pageTop;
@@ -60,5 +59,4 @@ window.addEventListener('load', function () {
         });
 
 	}
-
 });
