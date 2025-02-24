@@ -1,20 +1,6 @@
 window.addEventListener('load', function () {
     'use strict';
-
-	function adjustMainWidth() {
-		const image = document.querySelector('img');
-		const main = document.querySelector('main');
-	
-		// if (image && main) {
-		const imageWidth = image.offsetWidth;
-		main.style.width = (window.innerWidth - imageWidth) + 'px';
-		// }
-	}
-
-	adjustMainWidth();
-	
-	// window.addEventListener('load', adjustMainWidth);
-	window.addEventListener('resize', adjustMainWidth);
+	console.log('reading js');
 
     const area1 = document.querySelector('#area1');
     const area2 = document.querySelector('#area2');
@@ -27,7 +13,9 @@ window.addEventListener('load', function () {
     const brownbag = document.querySelector('#brownbag');
     const original = document.querySelector('#original-img');
 
- 	const images = [dogcollar, bluebag, puffbag, brownbag, original];
+
+	const images = [dogcollar, bluebag, puffbag, brownbag, original];
+
 
 	const areas = document.querySelectorAll('area');
 	const sections = document.querySelectorAll('section');
@@ -39,6 +27,7 @@ window.addEventListener('load', function () {
 	
 	resetPagePosition();
    
+	// image map effect, stacking the designated image on top when hovered
 	function putImageOnTop(hoveredImage){
 		for (let i = 0; i < images.length; i++) {
 			if (images[i] === hoveredImage) {
@@ -49,6 +38,7 @@ window.addEventListener('load', function () {
 		}
 	}
 
+	// replaces the original image back on top when no area is hovered
 	function resetImages() {
 		for (let i = 0; i < images.length; i++) {
 			if (images[i] === original) {
@@ -59,7 +49,7 @@ window.addEventListener('load', function () {
 		}
 	}
 
-    // hover effect
+    // hover effect for the image map
 	area1.addEventListener('mouseenter', function () {
 		putImageOnTop(dogcollar);
 	});
@@ -96,20 +86,17 @@ window.addEventListener('load', function () {
 
 	// scroll color change effect
 	window.addEventListener('scroll', function () {
-		pageTop = window.scrollY + 300;
+		pageTop = window.scrollY + 100;
 
 		if (pageTop > sectionTops[counter]) {
 			counter++;
-			console.log(`scrolling down ${counter}`);
 		}
 
 		else if (counter > 1 && pageTop < sectionTops[counter - 1]) {
 			counter--;
-			console.log(`scrolling up ${counter}`);
 		}
 
 		if (counter != prevCounter) {
-			// document.querySelector('figure img').className = 'sect' + counter;
 			prevCounter = counter;
             
             const myStyle = `color${counter}`;
@@ -124,7 +111,7 @@ window.addEventListener('load', function () {
 			sectionTops.push(Math.floor(section.getBoundingClientRect().top) + window.scrollY);
 		});
 
-		const pagePosition = window.scrollY + 300;
+		const pagePosition = window.scrollY + 100;
 		counter = 0;
 
 		sectionTops.forEach(function (section) { 
@@ -132,8 +119,75 @@ window.addEventListener('load', function () {
                 counter++; 
             } 
         });
-
 	}
-	
 
+	// overlay effect
+	const viewMore = document.querySelector('#viewMore');
+	const overlay = document.querySelector('#overlay');
+	const x = document.querySelector('#x');
+	const prev = document.querySelector('#prev');
+	const next = document.querySelector('#next');
+
+	const overlayImages = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
+	const slide = document.querySelector('#dogpic');
+	const imageMap = document.querySelector('#imageMap');
+	const main = document.querySelector('main');
+	const bgImg = document.querySelector('#bg-img');
+	let currentImage = 0;
+
+	imageMap.className = "showing";
+	main.className = "showing";
+	overlay.className = "hidden";
+	bgImg.className = "hidden";
+
+	// triggers the overlay 'page'
+	viewMore.addEventListener('click', function(event){
+		event.preventDefault();
+		imageMap.className = "hidden";
+		main.className = "hidden";
+		bgImg.className = "showing";
+		overlay.className = "showing";
+	});
+	
+	// exits the overlay 'page'
+	x.addEventListener('click', function(event){
+		event.preventDefault();
+		imageMap.className = "showing";
+		main.className = "showing";
+		overlay.className = "hidden";
+		bgImg.className = "hidden";
+	});
+
+	// goes to the next picture
+	next.addEventListener('click', function(){
+		currentImage++;
+		if (currentImage > overlayImages.length-1) {
+			currentImage = 0;
+		}
+		slide.src = `images/${overlayImages[currentImage]}`;
+	});
+
+	// goes to the previous picture
+	prev.addEventListener('click', function(){
+		currentImage--;
+		if (currentImage < 0) {
+			currentImage = overlayImages.length-1;
+		}
+		slide.src = `images/${overlayImages[currentImage]}`;
+	});
+
+
+	// width responsiveness 
+	function adjustMainWidth() {
+		const image = document.querySelector('img');
+		const main = document.querySelector('main');
+	
+		const imageWidth = image.offsetWidth;
+		main.style.width = (window.innerWidth - imageWidth - 70) + 'px';
+	}
+
+	adjustMainWidth();
+	
+	// when screen width changes, the main width changes so not covered by image map
+	window.addEventListener('resize', adjustMainWidth);
 })();
