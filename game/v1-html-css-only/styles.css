@@ -1,0 +1,88 @@
+/********************* js display *********************/
+.showing {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+/********************* typography *********************/
+h1, p, button {
+    font-family: 'Caveat Brush', Arial;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+p {
+    font-size: 2em;
+    line-height: 0;
+
+}
+
+button {
+    font-size: 1.8em;
+}
+
+/********************* layout *********************/
+body {
+    background-color: #FEF6EB;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 70px;
+}
+
+#corgi1, #corgi2, #cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#brownarrow, #yellowarrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/********************* buttons *********************/
+#icons {
+    position: absolute;
+    top: 50px;
+    right: 5%;
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    display: block;
+    border-radius: 30px;
+    border: 2px solid black;
+    color: #F8828D;
+    background-color: white;
+    padding: 10px 30px;
+}
+
+#reveal, #pass, #add {
+    visibility: hidden;
+}
