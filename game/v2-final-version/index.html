@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game On! HTML/CSS Only</title>
+    <!-- normalize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Inika:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- icons -->
+	<script src="https://kit.fontawesome.com/b1a23226bb.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- js -->
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div id="gameMode">
+        <button id="restart">Restart</button>
+        <div id="top">
+            <h1>Pawjack</h1>
+            <p>Goal: Get a sum as close to 21 as possible!</p>
+        </div>
+        <div id="icons">
+            <!-- <img id="sound" src="images/sound.png" alt="mute and unmute icon" width="43" height="43"> -->
+            <i id="sound" class="fa-solid fa-volume-high"></i>
+            <i id="help" class="fa-solid fa-circle-question"></i>
+            <!-- <img id="help" src="images/help.png" alt="help icon" width="43" height="43"> -->
+        </div>
+        <div id="bottom">
+            <div id="corgi1">
+                <div id="message1"></div>
+                <div id="brownarrow">
+                    <p>Player 1's Turn</p>
+                    <img id="arrow1" src="images/brownarrow.png" alt="arrow" width="107" height="99">
+                </div>
+                <div>
+                    <img src="images/corgi1.png" alt="image of player 1" width="205" height="180">
+                    <img id="tear1" src="images/tear.png" alt="teardrop" width="20" height="28">
+                </div>
+                <div id="score1">
+                    <p>Player 1</p>
+                </div>
+            </div>
+            <div id="gameContainer">
+                <div id="cardContainer">
+                    <img src="images/cardback.png" alt="image of the back of the card" width="192" height="293">
+                </div>
+                <button id="start">Start Game</button>
+                <button id="reveal">Reveal Card</button>
+                <div id="passORadd">
+                    <button id="finish">Finish</button>            
+                    <button id="pass">Pass</button>
+                    <button id="add">Add a Card</button>
+                </div>
+            </div>
+            <div id="corgi2">
+                <div id="message2"></div>
+                <div id="yellowarrow">
+                    <p>Player 2's Turn</p>
+                    <img id="arrow2" src="images/yellowarrow.png" alt="arrow" width="107" height="99">
+                </div>
+                <div>
+                    <img src="images/corgi2.png" alt="image of player 2" width="205" height="180">
+                    <img id="tear2" src="images/tear.png" alt="teardrop" width="20" height="28">
+                </div>
+                <div id="score2">
+                    <p>Player 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-container">
+        <div id="modal">
+            <h2>How to Play:</h2>
+            <!-- <img id="close" src="images/close.png" width="43" height="43"> -->
+            <i id="close" class="fa-solid fa-xmark"></i>
+            <p>The goal of the game is to get as close to the sum of 21 as possible without busting it!</p>
+            <p>Each card value is represented by their number, except that the face cards all represent 10, and ace can be 1 or 11 depending on the score.</p>
+            <p>The randomly decided player to go first will add as many cards as they want with the goal in mind. When they are confident with their score, they can pass the turn onto the next player.</p>
+            <p>After the second player is confident with their score, they can click the 'finish' button to reveal the winner.</p>
+        </div>
+    </div>
+    <div id="winMode">
+        <h2></h2>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+        <img id="player1win" src="images/corgi1win.png" alt="player 1 wins" width="400" height="289">
+        <img id="player2win" src="images/corgi2win.png" alt="player 2 wins" width="400" height="289">
+        <button id="winPlayAgain">Play Again</button>
+    </div>
+    <div id="tieMode">
+        <h2>Tie!</h2>
+        <img id="player1tie" src="images/corgi1win.png" alt="player 1 wins" width="400" height="289">
+        <img id="player2tie" src="images/corgi2win.png" alt="player 2 wins" width="400" height="289">
+        <button id="tiePlayAgain">Play Again</button>
+    </div>
+
+    
+</body>
+</html>

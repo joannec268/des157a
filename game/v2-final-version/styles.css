@@ -1,0 +1,249 @@
+/********************* js display *********************/
+.showing {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/********************* typography *********************/
+h1, h2, p, button {
+    font-family: 'Caveat Brush', Arial;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+h2 {
+    font-size: 3.5em;
+}
+
+#top p {
+    line-height: 0;
+}
+
+p {
+    font-size: 2em;
+}
+
+button {
+    font-size: 1.8em;
+}
+
+#modal h2 {
+    font-size: 3em;
+}
+
+#modal p {
+    font-size: 1.6em;
+}
+
+/********************* layout *********************/
+/* shadow of modal */
+.modal-container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+
+#modal {
+    background-color: #FEF6EB;
+    margin: 3% 30%;
+    padding: 0px 30px 30px 30px;
+    position: relative;
+    border-radius: 10px;
+    border: 4px solid #F8828D;
+}
+
+#winMode #player1win, #winMode #player2win {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#winMode button, #tieMode button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#winMode h2, #tieMode h2 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tieMode #player1tie {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#tieMode #player2tie {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background-color: #FEF6EB;
+}
+
+#gameMode {
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 70px;
+    margin-top: 5%;
+}
+
+#corgi1, #corgi2, #gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#corgi1, #corgi2 {
+    position: relative;
+}
+
+#tear1 {
+    position: absolute;
+    top: 47%;
+    left: 41%;
+    animation-name: cry;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+#tear2 {
+    position: absolute;
+    top: 47%;
+    right: 41%;
+    animation-name: cry;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cry {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+.crying {
+    display: block;
+    animation: cry 1s ease-in-out forwards;
+}
+
+#brownarrow, #yellowarrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cardContainer {
+    width: 576px; 
+    height: 300px; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#cardContainer img {
+    /* for proper card shrinking */
+    flex: 1 1 auto; 
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+}
+
+/********************* buttons *********************/
+#icons {
+    position: absolute;
+    top: 11%;
+    right: 5%;
+    display: flex;
+    gap: 30px;
+}
+
+.fa-solid {
+    font-size: 32px;
+}
+
+#close {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+}
+
+.fa-solid:hover, .fa-solid:focus {
+    cursor: pointer;
+    color: #F8828D;
+    
+}
+
+button {
+    display: block;
+    border-radius: 30px;
+    border: 2px solid black;
+    color: #F8828D;
+    background-color: white;
+    padding: 10px 30px;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 2px solid #F8828D;
+    color: white;
+    background-color: #F8828D;
+}
+
+#restart {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+}
+
+#passORadd {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
