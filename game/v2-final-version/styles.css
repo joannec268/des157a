@@ -43,7 +43,24 @@ button {
     font-size: 1.6em;
 }
 
+a {
+    font-family: 'Nunito', serif;
+    /* font-size: 1.2em; */
+    color: rgb(0, 0, 0);
+}
+
+a:hover {
+    color: #F8828D;
+}
+
 /********************* layout *********************/
+footer {
+    /* padding: 20px; */
+    position: absolute;
+    bottom: 2%;
+    left: 2%; 
+}
+
 /* shadow of modal */
 .modal-container {
     position: fixed;
@@ -124,7 +141,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     gap: 70px;
-    margin-top: 5%;
+    margin-top: 4%;
 }
 
 #corgi1, #corgi2, #gameContainer {
@@ -132,6 +149,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#corgi1, #corgi2 {
+    gap: 10px;
+}
+
+#gameContainer {
     gap: 30px;
 }
 
@@ -238,7 +261,7 @@ button:hover {
 
 #restart {
     position: absolute;
-    top: 50px;
+    top: 9%;
     left: 5%;
 }
 

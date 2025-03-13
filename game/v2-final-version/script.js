@@ -107,7 +107,7 @@
     startBtn.addEventListener('click', function(){
         clickAudio.play();
         
-        document.querySelector('#bottom').style.marginTop = '-5%';
+        document.querySelector('#bottom').style.marginTop = '-3%';
 
         restartBtn.className = 'showing';
         startBtn.className = 'hidden';
@@ -336,7 +336,7 @@
         if (gameData.index === 0) {
             arrow1.className = 'hidden';
             arrow2.className = 'hidden';
-            document.querySelector('#bottom').style.marginTop = '-1%';
+            document.querySelector('#bottom').style.marginTop = '4%';
             setTimeout(function() {
                 message1.innerHTML = '';
                 document.querySelector('#bottom').style.marginTop = '6%';
@@ -347,7 +347,7 @@
         } else {
             arrow1.className = 'hidden';
             arrow2.className = 'hidden';
-            document.querySelector('#bottom').style.marginTop = '-1%';
+            document.querySelector('#bottom').style.marginTop = '4%';
             setTimeout(function() {
                 message2.innerHTML = '';
                 document.querySelector('#bottom').style.marginTop = '6%';
